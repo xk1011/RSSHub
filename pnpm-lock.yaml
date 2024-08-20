@@ -176,6 +176,9 @@ importers:
       puppeteer:
         specifier: 22.6.2
         version: 22.6.2(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)
+      puppeteer-cluster:
+        specifier: ^0.24.0
+        version: 0.24.0(puppeteer@22.6.2(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10))
       puppeteer-extra:
         specifier: 3.3.6
         version: 3.3.6(puppeteer-core@22.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10))(puppeteer@22.6.2(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10))
@@ -5831,6 +5834,11 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
+  puppeteer-cluster@0.24.0:
+    resolution: {integrity: sha512-zHPoNsrwkFLKFtgJJv2aC13EbMASQsE048uZd7CyikEXcl+sc1Nf6PMFb9kMoZI7/zMYxvuP658o2mw079ZZyQ==}
+    peerDependencies:
+      puppeteer: '>=22.0.0'
+
   puppeteer-core@22.6.2:
     resolution: {integrity: sha512-Sws/9V2/7nFrn3MSsRPHn1pXJMIFn6FWHhoMFMUBXQwVvcBstRIa9yW8sFfxePzb56W1xNfSYzPRnyAd0+qRVQ==}
     engines: {node: '>=18'}
@@ -11422,7 +11430,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.6
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -13771,7 +13779,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.4
+      debug: 4.3.6
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
       lru-cache: 7.18.3
@@ -13803,6 +13811,13 @@ snapshots:
   punycode.js@2.3.1: {}
 
   punycode@2.3.1: {}
+
+  puppeteer-cluster@0.24.0(puppeteer@22.6.2(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)):
+    dependencies:
+      debug: 4.3.6
+      puppeteer: 22.6.2(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)
+    transitivePeerDependencies:
+      - supports-color
 
   puppeteer-core@22.6.2(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
